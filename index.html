@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHUNG - Web</title>
+    <link rel="icon" href="img/HK-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+    </label>
+
+    <header class="hero" style="background-image: url('img/indexbg.jpg');">
+        <div class="hero-content">
+            <h1>瑪利歐</h1>
+            <p class="tagline">踏上一段神奇的之旅吧!!!</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="game-intro">
+            <h2>故事內容</h2>
+            <p>遊戲主角"瑪利歐"是義大利水管工人。 有一天他知道碧姬公主被庫巴覬覦綁架時，所以他決定去救了碧姬公主。 </br>
+                在拯救過程中有一些怪物阻礙， 因此，您將控制他閃避怪物同時收集寶物。</p>
+        </section>
+
+        <section class="features">
+            <h2>遊玩資訊</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>遊戲的操作</h3>
+                    <p>玩家可以自由地控制瑪利歐，玩家必須讓瑪利歐閃避怪物，同時收集星星和鑽石。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>玩法</h3>
+                    <p>玩家最終目標是讓瑪利歐安全過關。當玩家收集不同寶物時會得不同的分數, 星星會獲得100分,鑽石會獲得5分。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>關卡</h3>
+                    <p>遊戲總共有 2 關，當瑪利歐接觸到怪物時遊戲便會重新開始。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="character-intro">
+            <h2>角色介紹</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <img src="img/Paper-Mario-icon.png" alt="瑪利歐圖標">
+                    <h3>瑪利歐</h3>
+                    <p>遊戲的主角勇敢的義大利水管工。</p>
+                </div>
+                <div class="character-card">
+                    <img src="img/doorx64.png" alt="房屋圖標">
+                    <h3>房屋</h3>
+                    <p>主角觸碰後會前往下一關。</p>
+                </div>
+                <div class="character-card">
+                    <img src="img/Diamond-icon.png" alt="星星圖標">
+                    <h3>星星</h3>
+                    <p>觸碰後會獲得100點積分。</p>
+                </div>
+                <div class="character-card">
+                    <img src="img/Star-icon.png" alt="鑽石圖標">
+                    <h3>鑽石</h3>
+                    <p>主角觸碰後會獲得5點積分。</p>
+                </div>
+                <div class="character-card">
+                    <img src="img/Luma-Green-icon.png" alt="綠色圖標">
+                    <h3>Luma - 奇可(綠色)</h3>
+                    <p>綠色Luma會左右移動,主角觸碰後會重新開始關卡。</p>
+                </div>
+                <div class="character-card">
+                    <img src="img/Luma-Red-icon.png" alt="紅色圖標">
+                    <h3>Luma - 奇可(紅色)</h3>
+                    <p>紅色Luma會上下移動,主角觸碰後會重新開始關卡</p>
+                </div>
+                <div class="character-card">
+                    <img src="img/Shell-Green-icon.png" alt="綠龜殼圖標">
+                    <h3>綠龜殼</h3>
+                    <p>綠龜殼會隨機移動,主角觸碰後會重新開始關卡。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h2>遊戲截圖</h2>
+            <div class="screenshot-gallery">
+                <div class="screenshot">
+                    <img src="img/Lev1.png" alt="遊戲截圖1">
+                </div>
+                <div class="screenshot">
+                    <img src="img/Lev2.png" alt="遊戲截圖2">
+                </div>
+                <div class="screenshot">
+                    <img src="img/logo.jpeg" alt="遊戲截圖3">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 瑪利歐遊戲世界. 保留所有權利。   Design: WONGG</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <style>
+        .switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .hero {
+            width: 100%;
+            background-size: cover;
+        }
+
+        .game-intro p {
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
